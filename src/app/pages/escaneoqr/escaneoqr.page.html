@@ -1,0 +1,42 @@
+<ion-header color="#F2F2F2"[translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="warning">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card class="contenido">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center" class="titulo">Registro de Asistencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-label>¿Usted Es?</ion-label>
+      <br>
+      <ion-checkbox class="ion-text-center" labelPlacement="end">Estudiante</ion-checkbox>
+      <br>  
+      <ion-checkbox class="ion-text-center" labelPlacement="end">Docente</ion-checkbox>
+      <br>
+        <ion-button  size="default" fill="solid" color="dark">
+        Escanear Código
+        </ion-button>
+        <ion-button size="default" fill="solid" color="dark">
+          Generar Código
+        </ion-button>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

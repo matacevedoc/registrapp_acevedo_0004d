@@ -1,0 +1,46 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "username": "vivisol",
+        "password": "clave123",
+        "role": "docente",
+        "isactive": true
+      },
+      {
+        "id": 2,
+        "username": "matilini",
+        "password": "clave234",
+        "role": "docente",
+        "isactive": true
+      },
+      {
+        "id": 3,
+        "username": "heriberto",
+        "password": "clave345",
+        "role": "docente",
+        "isactive": true
+      },
+      {
+        "id": 4,
+        "username": "mauri",
+        "password": "clave456",
+        "role": "alumno",
+        "isactive": true
+      },
+      {
+        "id": 5,
+        "username": "m.acevedo",
+        "password": "clave567",
+        "role": "alumno",
+        "isactive": true
+      },
+      {
+        "id": 6,
+        "username": "ava",
+        "password": "clave678",
+        "role": "alumno",
+        "isactive": true
+      }
+    ]
+  }

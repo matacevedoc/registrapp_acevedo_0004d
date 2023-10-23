@@ -1,0 +1,53 @@
+<ion-header color="#F2F2F2" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio">Volver</ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img src="assets/logo_registrapp.png" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">Iniciar Sesión</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="Iniciosesion()">
+        <ion-list>
+          <ion-item>
+            <ion-label position="stacked">Usuario:</ion-label>
+            <ion-input type="text" name="username" formControlName="username"></ion-input>
+          </ion-item>
+          <div *ngIf="loginForm.get('username')?.hasError('required')">
+            <div style="color: red">Username es obligatorio</div>
+          </div>
+          <div *ngIf="loginForm.get('username')?.hasError('minlength')">
+            <div style="color: red">Username debe tener mínimo 4 caracteres</div>
+          </div>
+          <div *ngIf="loginForm.get('username')?.hasError('maxlength')">
+            <div style="color: red">username no debe exceder los 10 caracteres</div>
+          </div>
+          <ion-item>
+            <ion-label position="stacked">Contraseña:</ion-label>
+            <ion-input type="password" name="password" formControlName="password"></ion-input>
+          </ion-item>
+          <div *ngIf="loginForm.get('password')?.hasError('required')">
+            <div style="color: red">Password es obligatoria</div>
+          </div>
+          <div *ngIf="loginForm.get('password')?.hasError('minlength')">
+            <div style="color: red">Password debe tener mínimo 4 caracteres</div>
+          </div>
+          <div *ngIf="loginForm.get('password')?.hasError('maxlength')">
+            <div style="color: red">Password no debe exceder los 10 caracteres</div>
+          </div>
+        </ion-list>
+        <br>
+        <ion-button expand="block" fill="outline" shape="round" routerLink="/inicio">
+          Acceder
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

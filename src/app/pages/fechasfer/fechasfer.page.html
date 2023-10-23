@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-header color="#F2F2F2"[translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="warning">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+  <ion-card-content class="ion-text-center">
+    Feriados de 2023
+  </ion-card-content>
+</ion-card>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-sm="6" size-xs="12"
+      *ngFor="let feriado of feriadoss; index as i">
+      <ion-card color="warning">
+      <ion-card-header>
+        <ion-card-subtitle>
+          <span> {{i+1}} </span>
+          <span>{{feriado.title}}</span>
+        </ion-card-subtitle>
+        <ion-card-title>{{feriado.date}}</ion-card-title>
+      </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

@@ -1,0 +1,55 @@
+<ion-header color="#F2F2F2"[translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <img src="assets/logo_registrapp.png" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">Registro de usuario</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <form #formulario="ngForm" (key.enter)="Enviar()">
+        <ion-list>
+          <ion-item>
+            <ion-label position="stacked">Nombre: </ion-label>
+            <ion-input type="text" placeholder="Nombre completo"
+                        name="nombre" [(ngModel)]="usuario.nombre"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label position="stacked">Email: </ion-label>
+            <ion-input type="email" 
+                        name="email" [(ngModel)]="usuario.email"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+              <ion-label position="stacked">Username: </ion-label>
+              <ion-input type="text" 
+              name="edad" [(ngModel)]="usuario.username"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Contraseña: </ion-label>
+            <ion-input type="password" 
+            name="password" [(ngModel)]="usuario.password"></ion-input>
+        </ion-item>
+        </ion-list>
+        <br>
+        <ion-label>¿Usted Es?</ion-label>
+      <br>
+      <ion-checkbox class="ion-text-center" labelPlacement="end">Estudiante</ion-checkbox>
+      <br>  
+      <ion-checkbox class="ion-text-center" labelPlacement="end">Docente</ion-checkbox>
+      <br>
+        <ion-button [routerLink]="['/iniciosesion']" (click)="Enviar" size="default" expand="block" fill="outline" shape="round">
+          Enviar
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

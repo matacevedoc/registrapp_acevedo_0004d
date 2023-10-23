@@ -1,0 +1,55 @@
+<ion-header color="#F2F2F2"[translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="warning">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center"[fullscreen]="true">
+  <img src="assets/logo_registrapp.png" class="ion-padding">
+  <ion-button [routerLink]="['/escaneoqr']"  size="default" fill="solid" color="dark">
+    Registrar Asistencia
+    <ion-icon name="qr-code-outline"></ion-icon>
+  </ion-button>
+  <ion-button [routerLink]="['/iniciosesion']" size="default" fill="solid" color="dark">
+    Iniciar Sesión  
+   <ion-icon name="log-in-outline"></ion-icon>
+  </ion-button>
+  <ion-button [routerLink]="['/formulario']"  size="default" fill="solid" color="dark">
+    Registrarse
+    <ion-icon name="person-add-outline"></ion-icon>
+  </ion-button>
+  <ion-card class="contenido">
+    <ion-card-header>
+      <ion-card-title class="titulo">¿Qué es RegistrApp?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Somos una solución nacida de una necesidad, somos una aplicación móvil que registrará tu asistencia de forma automática con solo escánear un código QR
+      , buscamos agilizar con unos sencillos pasos la manera en la que los profesores hoy en dia registran la asistencia en clases.
+    </ion-card-content>
+    <img src="assets/escanearqr.jpg" class="ion-padding">
+  </ion-card>
+  
+  <!--
+  <ion-list>
+    <ion-item *ngFor="let c of componentes"
+              [routerLink]="c.redirecTo" detail="true">
+              <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
+            {{ c.name }}
+    </ion-item>
+  </ion-list>
+-->
+
+  <!--
+  <ion-button routerLink="/alert" expand="block" shape="round">
+    Ir a Alert 
+  </ion-button>
+  <ion-button routerLink="/action-sheet" expand="block" shape="round">
+    Ir a Action-sheet
+  </ion-button>
+  -->
+</ion-content>
